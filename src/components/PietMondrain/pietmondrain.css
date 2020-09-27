@@ -1,11 +1,4 @@
 
-body, html {
-    background-color: gray;
-}
-body {
-  margin-top: 40px;
-}
-
 .painting {
   display: grid;
   justify-content: center;

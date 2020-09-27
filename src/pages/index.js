@@ -6,9 +6,10 @@ import './index.css'
 import Bcard from "../components/BCard/bcard"
 import PietMondrain from "../components/PietMondrain/pietmondrain"
 
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Planet from "../components/Planet/planet"
+import Boo from "../components/Boo/boo"
+import Switch from "../components/Switch/switch"
 
 const IndexPage = () => (
   <div className='index-body'>
@@ -29,6 +30,18 @@ const IndexPage = () => (
     <div className='index-group'>
       <Planet />
     </div>
+    <br />
+    <hr />
+    <div className='index-group'>
+      <Boo />
+    </div>
+    <br />
+    <hr />
+    <div className='index-group'>
+      <Switch />
+    </div>
+    <br />
+    <hr />
     <Link to="/page-2/">Go to page 2</Link> <br />
     <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
   </div >
