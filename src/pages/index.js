@@ -10,6 +10,7 @@ import SEO from "../components/seo"
 import Planet from "../components/Planet/planet"
 import Boo from "../components/Boo/boo"
 import Switch from "../components/Switch/switch"
+import DesignDesk from "../components/DesignDesk/DesignDesk"
 
 const IndexPage = () => (
   <div className='index-body'>
@@ -34,6 +35,13 @@ const IndexPage = () => (
     <hr />
     <div className='index-group'>
       <Boo />
+    </div>
+    <br />
+    <hr />
+    <br />
+    <hr />
+    <div className='index-group'>
+      <DesignDesk />
     </div>
     <br />
     <hr />
