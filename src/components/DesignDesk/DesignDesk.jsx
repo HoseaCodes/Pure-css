@@ -2,7 +2,7 @@ import React from 'react'
 import './DesignDesk.css'
 
 const DesignDesk = () => {
-    return (<>
+    return (<div className='design-body'>
         <div class='design-box'>
             <div class='computer'>
                 <div class='screen'>
@@ -151,7 +151,7 @@ const DesignDesk = () => {
                 </div>
             </div>
         </div>
-    </>
+    </div>
     )
 }
 export default DesignDesk

@@ -1,5 +1,5 @@
 
-  .deisgn-box {
+  .design-box {
     height: 400px;
     width: 600px;
     position: relative;
@@ -146,9 +146,9 @@
   }
   .phone {
     position: absolute;
-    height: 35%;
-    bottom: 10%;
-    width: 8%;
+    height: 45%;
+    bottom: 0%;
+    width: 12%;
     left: 50%;
     background: silver;
     border-top-left-radius: 10px;
@@ -169,19 +169,19 @@
   }
   .phone-bar-1 {
     position: absolute;
-    width: 80%;
+    width: 60%;
     height: 15%;
-    top: 50%;
-    left: 30%;
+    top: 30%;
+    left: 20%;
     background: gray;
     border-radius: 50px;
   }
   .phone-bar-2 {
     position: absolute;
-    width: 80%;
+    width: 60%;
     height: 15%;
-    top: 90%;
-    left: 30%;
+    top: 70%;
+    left: 20%;
     background: gray;
     border-radius: 50px;
   }
