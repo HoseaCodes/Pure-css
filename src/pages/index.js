@@ -11,6 +11,7 @@ import Planet from "../components/Planet/planet"
 import Boo from "../components/Boo/boo"
 import Switch from "../components/Switch/switch"
 import DesignDesk from "../components/DesignDesk/DesignDesk"
+import Gameboy from "../components/Gameboy/Gameboy"
 
 const IndexPage = () => (
   <div className='index-body'>
@@ -47,6 +48,13 @@ const IndexPage = () => (
     <hr />
     <div className='index-group'>
       <Switch />
+    </div>
+    <br />
+    <hr />
+    <br />
+    <hr />
+    <div className='index-group'>
+      <Gameboy />
     </div>
     <br />
     <hr />
