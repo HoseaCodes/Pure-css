@@ -1,0 +1,10 @@
+.road {
+    border-bottom: 7px dashed black;
+  }
+  .guy {
+    position: relative;
+    background: url(https://i.imgur.com/0WtQo14.png) 0px 0 repeat; 
+    height: 470px; 
+    width: 300px;
+  }
+  
