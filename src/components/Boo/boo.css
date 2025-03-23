@@ -1,0 +1,144 @@
+.boo-box {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    background: none;
+  }
+  .circle{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    height: 60%;
+    width: 40%;
+    top: 15%;
+    left: 30%
+  }
+  .eye-left {
+    position: absolute;
+    background: black;
+    height: 14%;
+    width: 9%;
+    border-radius: 50%;
+    top: 30%;
+    left: 32%;
+  }
+  .eye-right {
+    position: absolute;
+    background: black;
+    height: 14%;
+    width: 9%;
+    border-radius: 50%;
+    top: 30%;
+    right: 32%;
+  }
+  .mouth{
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    background: red;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    top: 60%;
+    left: 25%;
+  }
+  .tongue {
+    position: absolute;
+    bottom: -10%;
+    width: 25%;
+    height: 35%;
+    left: 37.5%;
+    background: pink;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  
+  
+  }
+  .eyebrow-left {
+    position: absolute;
+    height: 8%;
+    width: 23%;
+    border-bottom: solid 6px black;
+    top: 20%;
+    left: 27%;
+    border-radius: 50%;
+  }
+  .eyebrow-right {
+    position: absolute;
+    height: 8%;
+    width: 23%;
+    border-bottom: solid 6px black;
+    top: 20%;
+    right: 27%;
+    border-radius: 50%;
+  }
+  .tooth-1{
+    position: absolute;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    height: 10%;
+    width: 14%;
+    background: white;
+    bottom: 30%;
+    left: 25%;
+  }
+  .tooth-2{
+    position: absolute;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    height: 8%;
+    width: 14%;
+    background: white;
+    bottom: 32.5%;
+    left: 38%;
+  }
+  .tooth-3{
+    position: absolute;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    height: 8%;
+    width: 14%;
+    background: white;
+    bottom: 32.5%;
+    left: 50%;
+  }
+  .tooth-4{
+    position: absolute;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(180deg);
+    height: 10%;
+    width: 14%;
+    background: white;
+    bottom: 30%;
+    right: 25%;
+  }
+  .arm-1{
+    position: absolute;
+    width: 55%;
+    height: 25%;
+    left: -30%;
+    top: 50%;
+    transform: rotate(-40deg);
+    background: white;
+    border-radius: 40px;
+    
+  }
+  .arm-2{
+    position: absolute;
+    width: 55%;
+    height: 25%;
+    right: -30%;
+    top: 50%;
+    transform: rotate(40deg);
+    background: white;
+    border-radius: 40px;
+    
+  }

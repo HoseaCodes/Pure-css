@@ -1,0 +1,26 @@
+.cat {
+    position: relative;
+    left: 35%;
+    background: url(http://stash.rachelnabors.com/24ways2012/cat_sprite.png) -800px 0 no-repeat; 
+    height: 200px; width: 400px;
+  }
+  
+  .cat.withCSS {
+    animation: run-cycle;
+    animation-duration: 1s;
+    animation-timing-function: steps(13,end);
+    animation-iteration-count: infinite;
+  }
+  @keyframes run-cycle {  
+    0% {background-position: -800px 0; }
+    100% {background-position: -800px -2591px; } 
+  }
+  
+  @media only screen and (min-width: 850px) { 
+    .cat-box {
+      margin: 4em auto;
+      width: 80%;
+    }
+  }
+
+  

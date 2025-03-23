@@ -4,28 +4,50 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import { Seo } from "../components/seo"
+import Bcard from "../components/BCard/bcard"
+import Guy from "../components/Guy/guy"
+import PietMondrain from "../components/PietMondrain/pietmondrain"
+import Cat from "../components/Cat/cat"
+import Planet from "../components/Planet/planet"
+import Boo from "../components/Boo/boo"
+import Switch from "../components/Switch/switch"
+import DesignDesk from "../components/DesignDesk/DesignDesk"
+import Gameboy from "../components/Gameboy/Gameboy"
+import "./index.css"
 
 const IndexPage = () => (
   <Layout>
     <section className="py-5 text-center container">
-      <div className="row py-lg-5">
-        <div className="col-lg-6 col-md-8 mx-auto">
-          <h1 className="fw-light">Hello world ! </h1>
-          <p className="lead text-muted"> Welcome to this Boostrap 5 Gatsby Starter</p>
-          <StaticImage
-            src="../images/gatsby-astronaut.png"
-            width={300}
-            quality={95}
-            formats={["AUTO", "WEBP"]}
-            alt="A Gatsby astronaut"
-            className="img-fluid"
-          />
-
+      <h1 style={{ color: 'white' }}>Hosea's Digital Art Gallery</h1>
+      <p>Welcome to my css journey.</p>
+      <div className='index-container'>
+        <div className='index-group'>
+          <Bcard />
         </div>
-      </div>
-      <div className="row">
-        <Link to="/about/" className="btn btn-primary my-2">About</Link>
-        <Link to="/page-2/" className="btn btn-secondary my-2">Go to page 2</Link>
+        <div className='index-group'>
+          <PietMondrain />
+        </div>
+        <div className='index-group'>
+          <Planet />
+        </div>
+        <div className='index-group'>
+          <Boo />
+        </div>
+        <div className='index-group'>
+          <DesignDesk />
+        </div>
+        <div className='index-group'>
+          <Switch />
+        </div>
+        <div className='index-group'>
+          <Gameboy />
+        </div>
+        <div className='index-group'>
+          <Cat />
+        </div>
+        {/* <div className='index-group'>
+          <Guy />
+        </div> */}
       </div>
     </section>
   </Layout>

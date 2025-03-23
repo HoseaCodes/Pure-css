@@ -1,0 +1,277 @@
+
+  .switch-box {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 6%;
+    width: 600px;
+    height: 400px;
+    background: none;
+  }
+  
+  .screen-outer {
+    position: absolute;
+    height: 60%;
+    width: 70%;
+    left: 15%;
+    top: 10%;
+    background: #0D161D;
+  }
+  .screen-inner {
+    position: absolute;
+    height: 80%;
+    width: 90%;
+    background: #E60001;
+    top: 10%;
+    left: 5%;
+  }
+  .switch-left{
+    position: absolute;
+    background: none;
+    height: 60%;
+    top: 15%;
+    width: 15%;
+    left: 32.5%;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border: solid 8px white;
+  }
+  .switch-right{
+    position: absolute;
+    background: white;
+    height: 60%;
+    top: 15%;
+    width: 15%;
+    right: 32.5%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: solid 8px white;
+  }
+  .switch-circle-left {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    width: 50%;
+    height: 20%;
+    top: 20%;
+    left: 25%;
+    animation: move1 3s infinite;
+  
+  }
+  .switch-circle-right {
+    position: absolute;
+    border-radius: 50%;
+    background: #E60001;
+    width: 50%;
+    height: 20%;
+    bottom: 20%;
+    left: 25%;
+    animation: move2 3s infinite;
+  }
+  .controller-left {
+    position: absolute;
+    height: 60%;
+    width: 15%;
+    left: 0%;
+    top: 10%;
+    background: gray;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .controller-right {
+    position: absolute;
+    height: 60%;
+    width: 15%;
+    right: 0%;
+    top: 10%;
+    background: gray;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .joystick-left {
+    position: absolute;
+    border-radius: 50%;
+    height: 15%;
+    width: 50%;
+    top: 15%;
+    left: 25%;
+    background: #36383f;
+  }
+  .joystick-inner {
+    position: absolute;
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    background: #202226;
+  }
+  .dpad-left {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    bottom: 30%;
+    height: 25%;
+  }
+  
+  .up {
+    position: absolute;
+    background: #202226;
+    height: 30%;
+    width: 35%;
+    border-radius: 50%;
+    left: 35%;
+  }
+  
+  .down {
+    position: absolute;
+    background: #202226;
+    height: 30%;
+    width: 35%;
+    border-radius: 50%;
+    left: 35%;
+    bottom: 0%;
+  }
+  .left {
+    position: absolute;
+    background: #202226;
+    height: 30%;
+    width: 35%;
+    top: 35%;
+    border-radius: 50%;
+    left: 0%;
+  }
+  .right {
+    position: absolute;
+    background: #202226;
+    height: 30%;
+    width: 35%;
+    top: 35%;
+    border-radius: 50%;
+    right: 0%;
+  }
+  .dpad-right {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    bottom: 50%;
+    height: 25%;
+  }
+  .joystick-right {
+    position: absolute;
+    border-radius: 50%;
+    height: 15%;
+    width: 50%;
+    bottom: 25%;
+    left: 25%;
+    background: #36383f;
+  }
+  .top-button {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 30%;
+    height: 4%;
+    background: #202226;
+    border-radius: 40px;
+  }
+  .top-dpad {
+    position: absolute;
+    top: 5%;
+    height: 10%;
+    width: 30%;
+    left: 5%;
+    background: #202226;
+  }
+  .square-top-left {
+    position: absolute;
+    background: #737A80;
+    height: 35%;
+    width: 40%;
+    left: -5%
+  }
+  .square-top-right {
+    position: absolute;
+    background: #737A80;
+    height: 35%;
+    width: 40%;
+    right: -5%;
+  }
+  .square-bottom-left {
+    position: absolute;
+    background: #737A80;
+    height: 35%;
+    width: 40%;
+    left: -5%;
+    bottom: 0%;
+  
+  }
+  .square-bottom-right {
+    position: absolute;
+    background: #737A80;
+    height: 35%;
+    width: 40%;
+    right: -5%;
+    bottom: 0%;
+  }
+  .square-bottom {
+    position: absolute;
+    background: #202226;
+    height: 6%;
+    width: 18%;
+    bottom: 18%;
+    right: 10%;
+  }
+  .circle-bottom {
+    position: absolute;
+    border-radius: 50%;
+    height: 7.5%;
+    width: 25%;
+    bottom: 15%;
+    left: 15%;
+    background: #36383f;
+  }
+  .circle-inner {
+    position: absolute;
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    background: #202226;
+  }
+  
+  @keyframes move1{
+    0%{
+      top: 10%;
+    }
+    25%{
+      top: 20%;
+    }
+    50%{
+      top: 40%;
+    }
+    75%{
+      top: 60%;
+    }
+    100%{
+      top: 80%;
+    }
+  }
+  @keyframes move2{
+    0%{
+      bottom: 10%;
+    }
+    25%{
+      bottom: 20%;
+    }
+    50%{
+      bottom: 40%;
+    }
+    75%{
+      bottom: 60%;
+    }
+    100%{
+      bottom: 80%;
+    }
+  }
