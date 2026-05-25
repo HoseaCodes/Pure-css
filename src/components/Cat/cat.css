@@ -1,7 +1,7 @@
 .cat {
     position: relative;
     left: 35%;
-    background: url(http://stash.rachelnabors.com/24ways2012/cat_sprite.png) -800px 0 no-repeat; 
+    background: url(../../images/cat_sprite.png) -800px 0 no-repeat;
     height: 200px; width: 400px;
   }
   
