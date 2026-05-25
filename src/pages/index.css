@@ -1,50 +1,447 @@
-body {
-    background-color: lightgray;
-    margin: 0;
-}
-.index-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: darkslategray;
-    border: 4px solid black;
-    overflow: hidden;
-    width: 49.5%;
-    margin: 0;
-    padding: 2%
+/* ---------- Design tokens ---------- */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: "Cormorant Garamond", "EB Garamond", Georgia, "Times New Roman", serif;
+
+  --color-background-primary: #FBFAF6;
+  --color-background-secondary: #F4F1EA;
+  --color-text-primary: #1B1B19;
+  --color-text-secondary: #5F5E5A;
+  --color-text-tertiary: #8E8C85;
+  --color-border-secondary: rgba(0, 0, 0, 0.18);
+  --color-border-tertiary: rgba(0, 0, 0, 0.10);
+
+  --border-radius-md: 6px;
 }
 
-.index-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+body {
+  margin: 0;
+  background-color: var(--color-background-primary);
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
 }
-/* }
-.panels{
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .panels li{
-    position: relative;
-    width: 25%;
-    margin: 0;
-    display: block;
-    box-sizing: border-box;
-    float: left
-  }
-  
-  .panels li div{
-    width: 100%;
-    padding: 50% 0;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 0;
-    cursor: pointer;
-  }
-   */
+
+/* ---------- Root ---------- */
+.gal-root {
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+}
+
+/* ---------- Hero ---------- */
+.gal-hero {
+  padding: 4rem 1.5rem 3rem;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+.gal-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+}
+.gal-title {
+  font-family: var(--font-serif);
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+  color: var(--color-text-primary);
+}
+.gal-title em {
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+.gal-lede {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin: 0;
+}
+.gal-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.gal-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.gal-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #1D9E75;
+  display: inline-block;
+}
+
+/* ---------- Sections ---------- */
+.gal-section {
+  padding: 3rem 1.5rem;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+.gal-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 2.5rem;
+}
+.gal-section-title {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+}
+.gal-section-num {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+
+/* ---------- Gallery wall ---------- */
+.wall {
+  background: var(--color-background-secondary);
+  padding: 3.5rem 2rem 2.5rem;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem 3.5rem;
+}
+
+.piece {
+  /* reset button defaults */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.piece:hover { transform: translateY(-3px); }
+.piece:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 6px;
+}
+
+.frame {
+  background: #FFFFFF;
+  padding: 18px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.08),
+    0 10px 22px -10px rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.canvas {
+  width: 280px;
+  height: 200px;
+  background: #FAFAF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Scaled wrapper for the live CSS art components inside the canvas */
+.art-fit {
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plaque {
+  margin-top: 14px;
+  padding-left: 2px;
+  max-width: 260px;
+}
+.plaque-name {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  font-style: italic;
+  color: #2C2C2A;
+  margin: 0 0 2px;
+  line-height: 1.3;
+}
+.plaque-meta {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5F5E5A;
+  margin: 0;
+}
+
+/* ---------- Artist ---------- */
+.gal-artist {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  max-width: 720px;
+}
+.gal-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--color-background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 36px;
+  color: var(--color-text-secondary);
+}
+.gal-artist-name {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 4px;
+}
+.gal-artist-role {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+  letter-spacing: 0.05em;
+}
+.gal-bio {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+  margin: 0 0 1.25rem;
+}
+.gal-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.gal-tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+}
+
+/* ---------- CTAs ---------- */
+.gal-cta-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.gal-cta {
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: var(--border-radius-md);
+  border: 0.5px solid var(--color-border-secondary);
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+.gal-cta:hover { opacity: 0.85; }
+.gal-cta-primary {
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  border-color: var(--color-text-primary);
+}
+
+/* ---------- Footer ---------- */
+.gal-footer {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+
+/* ---------- Modal ---------- */
+.gal-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.62);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 1000;
+  animation: gal-fade-in 180ms ease-out;
+}
+
+.gal-modal {
+  position: relative;
+  background: #FFFFFF;
+  padding: 32px;
+  max-width: min(900px, 92vw);
+  max-height: 88vh;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.08),
+    0 30px 80px -20px rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: gal-rise 220ms ease-out;
+}
+
+.gal-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: transparent;
+  border: 0;
+  font-size: 28px;
+  line-height: 1;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: inherit;
+}
+.gal-modal-close:hover { color: var(--color-text-primary); }
+.gal-modal-close:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 2px;
+}
+
+.gal-modal-stage {
+  width: min(820px, 84vw);
+  height: min(520px, 60vh);
+  background: #FAFAF7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gal-modal-plaque {
+  text-align: center;
+  padding: 0 8px;
+}
+.gal-modal-plaque .plaque-name {
+  font-size: 18px;
+}
+.gal-modal-plaque .plaque-meta {
+  font-size: 11px;
+}
+
+@keyframes gal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes gal-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Session-request modal ---------- */
+.gal-session-modal {
+  align-items: stretch;
+  width: min(520px, 92vw);
+  max-width: 520px;
+  padding: 36px 36px 28px;
+  gap: 14px;
+}
+.gal-session-head {
+  text-align: left;
+}
+.gal-session-head .gal-eyebrow {
+  margin: 0 0 10px;
+}
+.gal-session-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+.gal-session-sub {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.gal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 8px;
+}
+.gal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.gal-field > span {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-tertiary);
+}
+.gal-field input,
+.gal-field select,
+.gal-field textarea {
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: #FAFAF7;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 120ms ease;
+  resize: vertical;
+}
+.gal-field input:focus,
+.gal-field select:focus,
+.gal-field textarea:focus {
+  border-color: var(--color-text-primary);
+}
+.gal-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .gal-title { font-size: 38px; }
+  .gal-section-head { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .gal-artist { grid-template-columns: 1fr; }
+  .canvas { width: 240px; height: 180px; }
+  .wall { gap: 2.5rem; padding: 2rem 1rem; }
+  .piece { margin-bottom: 0 !important; }
+  .gal-modal { padding: 20px; }
+  .gal-modal-stage { width: 84vw; height: 50vh; }
+}
+
+/* ---------- Legacy override: stop old dark background on body ---------- */
+.index-container, .index-group { all: unset; }

@@ -49,5 +49,12 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "homepage": "https://github.com/r-ichard/gatsby-starter-bootstrap-5#readme",
-  "main": "gatsby-browser.js"
+  "main": "gatsby-browser.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "overrides": {
+    "msgpackr": "^1.11.2",
+    "lmdb": "^2.9.4"
+  }
 }
