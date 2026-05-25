@@ -1,0 +1,1037 @@
+.rock-lee,
+.rock-lee *,
+.rock-lee *:before,
+.rock-lee *:after {
+  box-sizing: border-box;
+}
+
+.rocklee-cell {
+  aspect-ratio: 1 / 1;
+}
+
+.rocklee-cell .rock-lee {
+  transform: scale(2);
+  transform-origin: 46% 50%;
+}
+
+.rock-lee {
+  --size: 90;
+  --skin: #FABC9A;
+  --forehead: rgb(255, 145, 111);
+  --outfit: #80BFA1;
+  --outfit-shade: rgb(47, 116, 82);
+  --trim: #FF7853;
+  --trim-dark: rgb(221, 41, 17);
+  --shoe: #0C0D58;
+  --pouch: rgb(8, 51, 30);
+
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.4 / 1;
+  container-type: size;
+}
+
+.rock-lee .head {
+  height: calc(var(--size) / 1.05 * 1cqmin);
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rock-lee .head__block {
+  overflow: hidden;
+  position: absolute;
+  background: #111;
+  height: 23%;
+  width: calc(var(--size) / 5.5 * 1cqmin);
+  top: 2.5%;
+  left: 26.5%;
+  border-radius: 50%;
+}
+
+.rock-lee .head__block--stripe {
+  position: absolute;
+  background: linear-gradient(to right, #eee 24%, #111 24% 29%, #eee 29% 50%, #000 50% 58%, #eee 58% 71%, #000 71% 78%, #eee 78%);
+  height: 12.5%;
+  width: 100%;
+  top: 24%;
+}
+
+.rock-lee .head__block--face {
+  position: absolute;
+  z-index: 999;
+  overflow: hidden;
+  background: var(--skin);
+  width: calc(var(--size) / 6.5 * 1cqmin);
+  height: 16.5%;
+  border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+  transform: rotate(180deg);
+  top: 9.7%;
+  left: 29.5%;
+  clip-path: inset(0 0 25% 0);
+}
+
+.rock-lee .head__block.eye {
+  --s: 1.7;
+  position: absolute;
+  width: calc(var(--s) * 1cqmin);
+  height: calc(var(--s) * 1cqmin);
+  border-radius: 50%;
+}
+
+.rock-lee .head__block.eye.left {
+  top: 43.5%;
+  left: 68%;
+  z-index: 3;
+}
+
+.rock-lee .head__block.eye.right {
+  top: 43.5%;
+  left: 23%;
+  z-index: 3;
+}
+
+.rock-lee .eyebrow {
+  --w: 3.7;
+  position: absolute;
+  width: calc(var(--w) * 1cqmin);
+  height: 11%;
+  background-color: #111;
+  border-radius: 0;
+  z-index: 5;
+}
+
+.rock-lee .eyebrow.left {
+  top: 50%;
+  left: 62%;
+}
+
+.rock-lee .eyebrow.right {
+  top: 50%;
+  left: 16%;
+}
+
+.rock-lee .head__block.nose {
+  width: 1.1%;
+  background: #000;
+  position: absolute;
+  height: 12%;
+  top: 44%;
+  left: 53.5%;
+  border-radius: 0;
+}
+
+.rock-lee .head__block.nose.bar {
+  width: 1%;
+  background: #000;
+  position: absolute;
+  height: 8%;
+  transform: rotate(90deg);
+  top: 34%;
+  left: 52%;
+  border-radius: 0;
+}
+
+.rock-lee .head__block.mouth {
+  width: 1%;
+  background: #000;
+  position: absolute;
+  height: 20%;
+  transform: rotate(90deg);
+  top: 10%;
+  left: 52%;
+  border-radius: 0;
+}
+
+.rock-lee .head__block.forehead {
+  border-radius: 0;
+  position: absolute;
+  background: var(--forehead);
+  background-image: radial-gradient(#000 15%, var(--forehead) 25%);
+  background-size: 5px 5px;
+  background-position: 0 0;
+  top: 65.5%;
+  height: 10%;
+  left: -5%;
+}
+
+.rock-lee .torso__block {
+  position: absolute;
+  width: calc(var(--size) / 4.75 * 1cqmin);
+  height: 25%;
+  top: 18.5%;
+  left: 41%;
+  background: var(--outfit);
+  border-radius: 50% 50% 0 0 / 95% 99% 0 0;
+  clip-path: inset(21% 15% 0 9%);
+  z-index: -1;
+}
+
+.rock-lee .torso__block--shoulder {
+  width: calc(var(--size) / 5 * 1cqmin);
+  height: 5.6%;
+  background: var(--outfit);
+  position: absolute;
+  top: 31.2%;
+  left: 46.45%;
+  border-radius: 20% 40% 0 0 / 99% 20% 0 0;
+  transform: rotate(99deg);
+  clip-path: inset(0 2% 0 0%);
+}
+
+.rock-lee .belt {
+  position: absolute;
+  width: 11.7%;
+  height: 3%;
+  background: var(--trim);
+  z-index: 999;
+  overflow: hidden;
+}
+
+.rock-lee .top {
+  top: 43.3%;
+  width: 11.75%;
+  left: 42.425%;
+  border-radius: 60% 50% 0 0 / 10% 30% 0 0;
+  clip-path: inset(0 3% 0 0);
+}
+
+.rock-lee .bottom {
+  transform: rotate(180deg);
+  top: 45.75%;
+  left: 42.4%;
+  border-radius: 60% 60% 0 0 / 50% 40% 0 0;
+  width: 11.6%;
+  clip-path: inset(0 0 0 2%);
+}
+
+.rock-lee .belt__badge {
+  background: #ddd;
+  width: 5.25%;
+  height: 3%;
+  position: absolute;
+  top: 44.5%;
+  left: 46.8%;
+  z-index: 1000;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.rock-lee .badge__detail {
+  --w: .65;
+  --h: .2;
+  width: calc(var(--w) * 1cqmin);
+  height: calc(var(--w) * 1cqmin);
+  background: #000;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.rock-lee .badge__detail.one {
+  top: 10%;
+  left: 6%;
+}
+
+.rock-lee .badge__detail.two {
+  top: 60%;
+  left: 6%;
+}
+
+.rock-lee .badge__detail.three {
+  top: 10%;
+  left: 86.3%;
+}
+
+.rock-lee .badge__detail.four {
+  top: 60%;
+  left: 86.3%;
+}
+
+.rock-lee .badge__detail.five {
+  top: 45%;
+  width: 35%;
+  height: 2%;
+  left: -85%;
+  border-radius: 0;
+}
+
+.rock-lee .shuriken {
+  position: absolute;
+  top: 46%;
+  left: 39.75%;
+  width: 5.2%;
+  height: 6%;
+  background: radial-gradient(#000 25%, #D61E01 25%);
+  background-size: 4px 4px;
+  transform: rotate(3deg);
+  background-position: 0 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  z-index: -1;
+}
+
+.rock-lee .shin__left {
+  position: absolute;
+  top: 65%;
+  left: 40.25%;
+  height: 22%;
+  width: 6.4%;
+  background: linear-gradient(to bottom, var(--outfit) 10%, #fff 10% 23%, var(--outfit) 23% 39.5%, var(--trim) 39.5%);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.rock-lee .shin__left--detail {
+  position: absolute;
+  background: #000;
+  top: 40%;
+  height: 60%;
+  width: 2%;
+}
+
+.rock-lee .shin__left--detail.one {
+  left: 17%;
+}
+
+.rock-lee .shin__left--detail.two {
+  left: 47%;
+}
+
+.rock-lee .shin__left--detail.three {
+  left: 79%;
+}
+
+.rock-lee .foot {
+  position: absolute;
+  top: 87%;
+  left: 40.1%;
+  height: 9%;
+  width: 6.2%;
+  background: linear-gradient(to bottom, var(--shoe) 40%, #000 40% 42%, var(--shoe) 42% 65%, var(--skin) 65%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.rock-lee .toe {
+  width: 2%;
+  height: 15%;
+  background: #000;
+  position: absolute;
+}
+
+.rock-lee .toe--one {
+  top: 80%;
+  left: 16%;
+}
+
+.rock-lee .toe--two {
+  top: 80%;
+  left: 30%;
+}
+
+.rock-lee .toe--three {
+  top: 80%;
+  left: 45%;
+}
+
+.rock-lee .toe--four {
+  top: 78%;
+  left: 60%;
+  height: 17%;
+}
+
+.rock-lee .toe--five {
+  top: 75%;
+  left: 75%;
+  height: 20%;
+}
+
+.rock-lee .sole {
+  position: absolute;
+  top: 93.9%;
+  left: 40.5%;
+  background: linear-gradient(transparent 50%, var(--shoe) 50%);
+  height: 3%;
+  width: 5.5%;
+  border-radius: 20px;
+}
+
+.rock-lee .left__thigh {
+  position: absolute;
+  width: 6.5%;
+  height: 21%;
+  background: var(--outfit);
+  top: 45%;
+  left: 41%;
+  clip-path: polygon(15% 0%, 0% 100%, 100% 100%);
+  transform: rotate(7deg);
+  border-bottom-left-radius: 3px;
+}
+
+.rock-lee .left__thigh.pad {
+  width: 20%;
+  top: 48.5%;
+  left: 38%;
+  background: linear-gradient(var(--outfit) 68%, transparent 50%);
+  transform: rotate(76deg);
+}
+
+.rock-lee .left__thigh.sliver {
+  width: 70%;
+  height: 22%;
+  top: 65%;
+  left: 0.5%;
+  background: linear-gradient(var(--outfit) 15%, transparent 15%);
+  transform: rotate(119deg);
+}
+
+.rock-lee .right__thigh {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background: linear-gradient(var(--outfit) 40%, transparent 40%);
+  top: 45%;
+  left: 44.5%;
+  clip-path: polygon(20% 0%, 0% 100%, 50% 50%);
+  transform: rotate(5deg);
+}
+
+.rock-lee .right__thigh.detail {
+  position: absolute;
+  width: 12.5%;
+  height: 21.5%;
+  top: 50%;
+  left: 44.1%;
+  clip-path: none;
+  transform: rotate(52deg);
+}
+
+.rock-lee .right__thigh.detail.knee {
+  width: 8.5%;
+  height: 15%;
+  top: 56.75%;
+  left: 52%;
+  transform: rotate(115deg);
+  border-radius: 50% 50% 0 0 / 45% 0% 0 0;
+}
+
+.rock-lee .right__thigh.detail.knee.two {
+  width: 2.2%;
+  height: 12.5%;
+  top: 55%;
+  left: 52.6%;
+  background: radial-gradient(#000 25%, var(--outfit-shade) 25%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+  transform: rotate(144deg);
+  border-radius: 50% 50% 0 0 / 25% 0% 0 0;
+}
+
+.rock-lee .right__thigh.detail.knee.two--inner {
+  width: 2%;
+  height: 7%;
+  top: 63.5%;
+  left: 55%;
+  background: radial-gradient(#000 25%, var(--outfit-shade) 25%);
+  z-index: -1;
+  background-position: 0 0;
+  background-size: 4px 4px;
+  transform: rotate(18deg);
+  border-radius: 50% 50% 0 0 / 45% 60% 0 0;
+}
+
+.rock-lee .leg-detail {
+  position: absolute;
+  top: 55.5%;
+  left: 49.7%;
+  background: #000;
+  width: 3.9%;
+  height: .2%;
+  transform: rotate(140deg);
+}
+
+.rock-lee .leg-detail.r {
+  top: 66%;
+  left: 54.8%;
+  width: 2.5%;
+  background: #000;
+  z-index: 999;
+  transform: rotate(170deg);
+}
+
+.rock-lee .patchwork {
+  background: var(--outfit);
+  position: absolute;
+  top: 64.4%;
+  left: 56.4%;
+  width: 2.1%;
+  height: 2%;
+  border-radius: 50% 50% 0 0 / 45% 45% 0 0;
+  transform: rotate(85deg);
+}
+
+.rock-lee .leg-detail.l {
+  top: 68.7%;
+  left: 40%;
+  width: 6.75%;
+  background: #000;
+  z-index: 999;
+  transform: rotate(164deg);
+}
+
+.rock-lee .leg-detail.l-two {
+  top: 56.5%;
+  left: 40.9%;
+  width: 2.5%;
+  background: #000;
+  z-index: 999;
+  transform: rotate(140deg);
+}
+
+.rock-lee .left-leg-band {
+  background: #fff;
+  width: 6.5%;
+  position: absolute;
+  height: 3.5%;
+  z-index: 999;
+  transform: rotate(10deg);
+  top: 61%;
+  left: 40.55%;
+  border-radius: 50% 50% 0 0 / 10% 15% 0 0;
+}
+
+.rock-lee .detail-leg {
+  position: absolute;
+  background: #000;
+  height: 5%;
+  width: 35%;
+  clip-path: 0;
+  top: 35%;
+}
+
+.rock-lee .detail-leg--two {
+  position: absolute;
+  background: #000;
+  height: 5%;
+  width: 35%;
+  clip-path: 0;
+  top: 60%;
+  right: 0%;
+}
+
+.rock-lee .torso__detail {
+  position: absolute;
+  background: #000;
+  --h: .2;
+  height: calc(var(--h) * 1cqmin);
+  width: 2.5%;
+  clip-path: 0;
+  top: 39.9%;
+  right: 45.25%;
+}
+
+.rock-lee .torso__detail--two {
+  position: absolute;
+  background: #000;
+  --h: .15;
+  height: calc(var(--h) * 1cqmin);
+  width: 2.5%;
+  clip-path: 0;
+  top: 38%;
+  right: 44.9%;
+  transform: rotate(25deg);
+}
+
+.rock-lee .pouch {
+  position: absolute;
+  background: radial-gradient(#000 25%, rgb(36, 82, 59) 25%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+  width: 2.4%;
+  height: 4.5%;
+  top: 58.5%;
+  left: 38.6%;
+  z-index: -1;
+  border-radius: 3px;
+  transform: rotate(9deg);
+}
+
+.rock-lee .pouch--finish {
+  position: absolute;
+  background: radial-gradient(#000 25%, rgb(36, 82, 59) 25%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+  width: 2.4%;
+  height: 4.5%;
+  top: 63%;
+  left: 38.6%;
+  z-index: -1;
+  border-radius: 3px;
+  transform: rotate(9deg);
+}
+
+.rock-lee .hand__behind {
+  position: absolute;
+  width: 4.9%;
+  height: 15.9%;
+  top: 22.5%;
+  left: 37.5%;
+  background: linear-gradient(to bottom, var(--skin) 38%, #eee 38%);
+  transform: rotate(0deg);
+  z-index: -1;
+  clip-path: inset(10% 0 5% 0);
+}
+
+.rock-lee .hand__behind--finger {
+  position: absolute;
+  height: 2%;
+  width: 1.5%;
+  opacity: 1;
+  background: var(--skin);
+  border-radius: 50% 50% 0 0 / 75% 75% 0 0;
+}
+
+.rock-lee .hand__behind--finger.a {
+  top: 22.5%;
+  left: 37.5%;
+}
+
+.rock-lee .hand__behind--finger.b {
+  top: 21.75%;
+  left: 39%;
+  height: 2.8%;
+  width: 1.5%;
+}
+
+.rock-lee .hand__behind--finger.c {
+  top: 22.5%;
+  left: 40.5%;
+}
+
+.rock-lee .hand__behind--finger.d {
+  top: 23%;
+  left: 41.8%;
+  height: 2%;
+}
+
+.rock-lee .hand__behind--finger.e {
+  top: 25.5%;
+  left: 41%;
+  height: 1.1%;
+  width: 3%;
+  transform: rotate(-70deg);
+  border-radius: 50% 50% 0 0 / 45% 45% 0 0;
+  z-index: -1;
+}
+
+.rock-lee .hand__behind--finger.f {
+  top: 29.3%;
+  left: 36.5%;
+  height: 3%;
+  width: 1.5%;
+  transform: rotate(25deg);
+  z-index: -1;
+}
+
+.rock-lee .ld {
+  --h: .1;
+  position: absolute;
+  background: #000;
+  top: 55%;
+  left: 0%;
+  height: calc(var(--h) * 1cqmin);
+  width: 100%;
+}
+
+.rock-lee .ld--two {
+  top: 68%;
+  left: 0%;
+}
+
+.rock-lee .ld--three {
+  top: 79%;
+  left: 0%;
+}
+
+.rock-lee .ld--four {
+  top: 90%;
+  left: 0%;
+}
+
+.rock-lee .ld--five,
+.rock-lee .ld--six,
+.rock-lee .ld--seven {
+  transform: rotate(90deg);
+  width: 115%;
+}
+
+.rock-lee .ld--five {
+  top: 20%;
+  left: -23.75%;
+}
+
+.rock-lee .ld--six {
+  top: 20%;
+  left: 3%;
+}
+
+.rock-lee .ld--seven {
+  top: 20%;
+  left: 30%;
+}
+
+.rock-lee .hand__top {
+  position: absolute;
+  top: 37.5%;
+  left: 37.3%;
+  background: radial-gradient(#000 25%, #ddd 25%);
+  background-position: 0 0;
+  background-size: 5px 5px;
+  width: 5%;
+  height: 3.5%;
+  border-radius: 50% 50% 0 0 / 5% 5% 0 0;
+}
+
+.rock-lee .hand__top.wrist {
+  background: radial-gradient(#000 25%, rgb(36, 82, 59) 25%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+  width: 1.75%;
+  height: 3.5%;
+  top: 35.5%;
+  left: 35.9%;
+  z-index: -1;
+  clip-path: polygon(10% 0%, 0% 100%, 100% 100%);
+  border-radius: 50% 50% 0 0 / 95% 95% 0 0;
+}
+
+.rock-lee .hand__top.wrist--two {
+  width: 2%;
+  height: 2.5%;
+  background: radial-gradient(#000 25%, rgb(36, 82, 59) 25%);
+  z-index: -1;
+  background-position: 0 0;
+  background-size: 4px 4px;
+  top: 38%;
+  left: 35.75%;
+  transform: rotate(-75deg);
+  border-radius: 50% 50% 0 0 / 95% 95% 0 0;
+}
+
+.rock-lee .hand__top--thumb {
+  background: #eee;
+  position: absolute;
+  width: 1.5%;
+  height: 3%;
+  top: 32%;
+  left: 35.5%;
+  transform: rotate(210deg);
+  border-radius: 50% 50% 0 0 / 5% 45% 0 0;
+}
+
+.rock-lee .hand__top--thumb--two {
+  background: #eee;
+  position: absolute;
+  width: 1.4%;
+  height: 3.3%;
+  top: 32.9%;
+  left: 36.2%;
+  z-index: -1;
+  transform: rotate(180deg);
+  border-radius: 50% 50% 0 0 / 5% 45% 0 0;
+}
+
+.rock-lee .right__leg.shin {
+  position: absolute;
+  width: 5.6%;
+  height: 16.25%;
+  background: var(--trim);
+  top: 70.5%;
+  left: 52%;
+  transform: rotate(21deg);
+  clip-path: inset(0 0 2% 0);
+}
+
+.rock-lee .right__leg.back {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background: radial-gradient(#000 25%, var(--trim-dark) 25%);
+  background-size: 4px 4px;
+  background-position: 0 0;
+}
+
+.rock-lee .right__leg.stripe {
+  position: absolute;
+  height: 100%;
+  left: 45%;
+  width: 2%;
+  background: #000;
+}
+
+.rock-lee .right__leg.stripe--two {
+  position: absolute;
+  height: 100%;
+  left: 70%;
+  width: 2%;
+  background: #000;
+}
+
+.rock-lee .right__shoe {
+  position: absolute;
+  left: 49.629%;
+  top: 87.3%;
+  width: 9.75%;
+  height: 1.875%;
+  background: var(--shoe);
+  transform: rotate(180deg);
+  border-radius: 50% 50% 0 0 / 50% 50% 0 0;
+}
+
+.rock-lee .right__shoe.cover {
+  position: absolute;
+  z-index: -1;
+  left: 49.89%;
+  top: 84.7%;
+  width: 4%;
+  height: 3.7%;
+  background: var(--shoe);
+  transform: rotate(18deg);
+  border-radius: 50% 50% 0 0 / 0% 20% 0 0;
+}
+
+.rock-lee .right__shoe.cover--two {
+  position: absolute;
+  left: 50.5%;
+  top: 84.7%;
+  width: 6%;
+  height: 3.7%;
+  background: var(--shoe);
+  transform: rotate(0deg);
+  border-radius: 50% 50% 0 0 / 0% 20% 0 0;
+}
+
+.rock-lee .right__shoe.cover--three {
+  position: absolute;
+  left: 56%;
+  top: 84.5%;
+  width: 2%;
+  height: 3.9%;
+  background: var(--shoe);
+  transform: rotate(95deg);
+  clip-path: polygon(20% 0%, 0% 100%, 100% 100%);
+}
+
+.rock-lee .right__shoe--toe {
+  position: absolute;
+  overflow: hidden;
+  left: 57.05%;
+  top: 84.89%;
+  width: 1.75%;
+  height: 4%;
+  background: var(--skin);
+  transform: rotate(105deg);
+  border-radius: 30% 50% 0 0 / 10% 95% 0 0;
+}
+
+.rock-lee .detail--toe {
+  position: absolute;
+  background: #000;
+  --h: .2;
+  height: calc(var(--h) * 1cqmin);
+  width: 150%;
+  right: -30%;
+  top: 19%;
+  transform: rotate(90deg);
+}
+
+.rock-lee .hidden__hand {
+  position: absolute;
+  top: 43.1%;
+  left: 41%;
+  width: 2.1%;
+  height: 4.5%;
+  background: #ddd;
+  z-index: 99;
+  transform: rotate(150deg);
+}
+
+.rock-lee .hidden__hand--finger {
+  position: absolute;
+  top: 42.1%;
+  left: 39.5%;
+  width: 1.1%;
+  height: 6%;
+  background: var(--skin);
+  transform: rotate(240deg);
+  border-radius: 50% 50% 0 0 / 15% 15% 0 0;
+}
+
+.rock-lee .hidden__hand--finger.g {
+  top: 42.9%;
+  height: 7%;
+  left: 40%;
+}
+
+.rock-lee .hidden__hand--finger.h {
+  top: 44.6%;
+  left: 40.5%;
+}
+
+.rock-lee .hidden__hand--finger.i {
+  top: 46.7%;
+  left: 40.25%;
+  height: 3.5%;
+  width: .9%;
+  transform: rotate(215deg);
+  z-index: -1;
+}
+
+.rock-lee .hidden__hand--finger.k {
+  width: 1%;
+  left: 41%;
+  z-index: 5;
+  top: 41.35%;
+  height: 2.5%;
+  transform: rotate(220deg);
+}
+
+.rock-lee .hidden__hand--detail,
+.rock-lee .hidden__hand--detail--two,
+.rock-lee .hidden__hand--detail--three {
+  background: #000;
+  height: .1%;
+  width: 2.5%;
+  position: absolute;
+  transform: rotate(150deg);
+  top: 45.9%;
+  z-index: 999;
+  left: 39%;
+}
+
+.rock-lee .hidden__hand--detail--two {
+  top: 47.1%;
+  left: 39.5%;
+}
+
+.rock-lee .hidden__hand--detail--three {
+  top: 48.5%;
+  left: 40.25%;
+  width: 1.2%;
+}
+
+.rock-lee .hidden__hand--detail--four {
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  width: 100%;
+  height: 5%;
+  z-index: 999;
+  transform: rotate(90deg);
+  background: #000;
+}
+
+.rock-lee .torso__patch {
+  --patch: rgb(36, 82, 59);
+  position: absolute;
+  top: 23.4%;
+  left: 42%;
+  width: 8%;
+  height: 9%;
+  z-index: -1;
+  background: radial-gradient(#000 25%, var(--patch) 25%);
+  background-position: 0 0;
+  background-size: 4px 4px;
+  border-radius: 50% 50%;
+  transform: rotate(90deg);
+}
+
+.rock-lee .badge__logo--help {
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  width: 26%;
+  height: 100%;
+  background: #fff;
+}
+
+.rock-lee .badge__logo--help--two {
+  position: absolute;
+  top: 0%;
+  left: 60%;
+  width: 20%;
+  height: 100%;
+  background: #fff;
+}
+
+.rock-lee .badge__logo--circle {
+  --s: 1.45;
+  position: absolute;
+  height: calc(var(--s) * 1cqmin);
+  width: calc(var(--s) * 1cqmin);
+  left: 40%;
+  top: 25%;
+  border-radius: 50%;
+  background: inherit;
+  border: 1px solid #000;
+}
+
+.rock-lee .badge__logo--tr-one {
+  --s: 1.5;
+  --h: .18;
+  position: absolute;
+  height: calc(var(--h) * 1cqmin);
+  width: calc(var(--s) * 1cqmin);
+  left: 25%;
+  top: 70.9%;
+  background: #000;
+  border-radius: 2px;
+}
+
+.rock-lee .badge__logo--tr-two {
+  --s: 1.8;
+  --h: .2;
+  position: absolute;
+  height: calc(var(--h) * 1cqmin);
+  border-radius: 10px;
+  width: calc(var(--s) * 1cqmin);
+  left: 22.5%;
+  top: 48%;
+  background: #000;
+  transform: rotate(-45deg);
+}
+
+.rock-lee .badge__logo--tr-three {
+  position: absolute;
+  background: #000;
+  --h: .2;
+  height: calc(var(--h) * 1cqmin);
+  width: 10%;
+  top: 56.2%;
+  left: 50%;
+  transform: rotate(45deg);
+}
+
+.rock-lee .badge__logo--tr-four {
+  position: absolute;
+  background: #000;
+  --h: .2;
+  height: calc(var(--h) * 1cqmin);
+  width: 10%;
+  top: 25%;
+  left: 57.5%;
+  transform: rotate(130deg);
+}
+
+.rock-lee .belt__detail--final {
+  position: absolute;
+  top: 46%;
+  left: 42.5%;
+  background: #000;
+  z-index: 999;
+  --h: .1;
+  height: calc(var(--h) * 1cqmin);
+  width: 2%;
+}

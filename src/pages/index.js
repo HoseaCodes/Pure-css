@@ -13,6 +13,7 @@ import Boo from "../components/Boo/boo"
 import Switch from "../components/Switch/switch"
 import DesignDesk from "../components/DesignDesk/DesignDesk"
 import Gameboy from "../components/Gameboy/Gameboy"
+import RockLee from "../components/RockLee/RockLee"
 import "./index.css"
 
 const IndexPage = () => (
@@ -48,6 +49,9 @@ const IndexPage = () => (
         {/* <div className='index-group'>
           <Guy />
         </div> */}
+        <div className='index-group rocklee-cell'>
+          <RockLee />
+        </div>
       </div>
     </section>
   </Layout>
