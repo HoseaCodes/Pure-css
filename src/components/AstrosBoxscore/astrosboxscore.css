@@ -1,0 +1,145 @@
+.asb-root {
+  background-color: #f9f5eb;
+  font-family: 'Courier New', Courier, monospace;
+  color: #1a1a1a;
+  line-height: 1.5;
+  padding: 15px 10px;
+  width: 100%;
+}
+
+.asb-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.asb-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.asb-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 26px;
+  margin: 12px 0 8px 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.asb-date {
+  font-size: 14px;
+  color: #555;
+}
+
+.asb-content {
+  text-align: center;
+}
+.asb-empty {
+  padding: 40px 20px;
+  font-size: 16px;
+}
+.asb-error {
+  color: #b00;
+  text-align: center;
+  font-size: 16px;
+}
+
+.asb-game {
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  vertical-align: top;
+  margin: 6px;
+  text-align: left;
+}
+.asb-card {
+  outline: 1px solid #1a1a1a;
+  padding: 14px;
+  background: #f9f5eb;
+}
+
+.asb-score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+.asb-teams {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.35;
+}
+.asb-record {
+  font-size: 12px;
+  font-weight: normal;
+  color: #1a1a1a;
+}
+.asb-scores {
+  text-align: right;
+  font-size: 26px;
+  font-weight: bold;
+  min-width: 65px;
+}
+.asb-score-away { line-height: 1; }
+.asb-score-home { line-height: 1.75; }
+.asb-win { font-weight: bold; }
+.asb-loss { font-weight: normal; }
+
+.asb-result {
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.asb-linescore {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin: 20px 0;
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+}
+.asb-linescore th,
+.asb-linescore td {
+  padding: 4px 2px;
+  text-align: center;
+}
+.asb-linescore th:first-child,
+.asb-linescore td:first-child {
+  text-align: left;
+  padding: 4px 6px;
+  font-weight: bold;
+}
+.asb-linescore th.asb-totals,
+.asb-linescore td.asb-totals {
+  width: 30px;
+}
+.asb-linescore td.asb-runs { font-weight: bold; }
+
+.asb-standouts {
+  margin: 18px 0 8px 0;
+  font-size: 13px;
+}
+
+.asb-decisions {
+  margin: 12px 0 8px 0;
+  font-size: 13px;
+  border-top: 1px dashed #aaa;
+  padding-top: 8px;
+}
+.asb-decisions div { white-space: nowrap; }
+
+.asb-final {
+  text-align: right;
+  font-style: italic;
+  color: #555;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.asb-footer {
+  margin-top: 50px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  padding: 0 10px;
+}

@@ -11,6 +11,7 @@ import Switch from "../components/Switch/switch"
 import DesignDesk from "../components/DesignDesk/DesignDesk"
 import Gameboy from "../components/Gameboy/Gameboy"
 import RockLee from "../components/RockLee/RockLee"
+import AstrosBoxscore from "../components/AstrosBoxscore/astrosboxscore"
 import "./index.css"
 
 const works = [
@@ -23,6 +24,7 @@ const works = [
   { name: "Gameboy", meta: "Object study · 2024", Component: Gameboy, scale: 0.5, offset: 40, modalScale: 1.2 },
   { name: "Cat", meta: "Character study · 2024", Component: Cat, scale: 0.5, offset: 0, modalScale: 1.2 },
   { name: "Rock Lee", meta: "Character study · 2025", Component: RockLee, scale: 0.5, offset: 30, modalScale: 1.4, naturalSize: { width: 500, height: 357 } },
+  { name: "Astro's Ticket", meta: "Object study · 2025", Component: AstrosBoxscore, scale: 0.5, offset: 60, modalScale: 1.2 },
 ]
 
 const IndexPage = () => {
